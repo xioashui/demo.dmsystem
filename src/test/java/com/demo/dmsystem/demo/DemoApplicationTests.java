@@ -9,6 +9,7 @@ class DemoApplicationTests {
     @Test
     void contextLoads() {
         System.out.println("hello word!");
+        System.out.println("hello word!");
     }
 
 }
