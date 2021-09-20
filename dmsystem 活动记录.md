@@ -6,5 +6,5 @@
 
 记录人员：李平喆
 
-日志：springboot 集成数据源 Hikari，spring_security。编写测试类，测试类已通过。
+日志：项目搭建，构建文件目录，springboot 集成JDBC，数据源 Hikari，spring_security。编写测试类（已通过）。编写配置类，资源拦截修正（已通过）。
 
