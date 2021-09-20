@@ -13,14 +13,15 @@ class Security extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http.authorizeRequests().antMatchers("/").permitAll()
                 .antMatchers("/student/**").hasRole("student")//学生
                 .antMatchers("/aunt/**").hasRole("aunt")//宿管
                 .antMatchers("/admin/**").hasRole("admin");//后台管理
         super.configure(http);
-        http.formLogin().loginPage("/").permitAll();//login form
+        http.formLogin().loginPage("/login").permitAll().failureUrl("/login/error");//login form
         http.logout().logoutSuccessUrl("/");//("/logout")
         http.rememberMe();//记住我
+        http.csrf().disable();
     }
 
     @Override
