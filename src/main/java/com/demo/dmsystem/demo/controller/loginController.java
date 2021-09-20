@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class loginController {
-    @RequestMapping("/login/error")
+    @RequestMapping("/login_error")
     @ResponseBody
     public String loginError() {
         return "不行啊";
