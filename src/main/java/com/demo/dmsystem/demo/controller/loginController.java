@@ -9,6 +9,6 @@ public class loginController {
     @RequestMapping("/login_error")
     @ResponseBody
     public String loginError() {
-        return "123";
+        return "error";
     }
 }
